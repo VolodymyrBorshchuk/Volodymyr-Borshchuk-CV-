@@ -1,0 +1,20 @@
+table {
+    margin-left: 10px;
+    border: 2px solid black;
+}
+
+.head > th {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+body > td {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+td{
+    border: 1px solid black;
+}
+p{
+    border-bottom: 1px solid black;
+}
