@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap');
+
+:root {
+    --accent: #EA5959;
+    --default: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #EA5959;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.toDo {
+    padding: 32px;
+    background-color: #fff;
+    width: 90vw;
+    border-radius: 16px;
+}
+
+.toDo__new {
+    --size: 50px;
+    display: flex;
+    margin: 16px 0;
+}
+
+.toDo__new input {
+    margin-right: 16px;
+    font-size: 18px;
+    padding: 8px 16px;
+    height: var(--size);
+    border: 1px solid var(--default);
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.toDo_add,
+.toDo__task-del {
+    cursor: pointer;
+    text-align: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    line-height: calc(var(--size) * 0.95);
+    font-size: 32px;
+    font-weight: 200;
+    background-color: var(--accent);
+    color: white;
+}
+.toDo__List{
+    margin-top: 16px;
+}
+.toDo__List>*:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.toDo__task {
+    cursor: default;
+    --size: 36px;
+    display: flex;
+    align-items: center;
+    min-height: var(--size);
+}
+
+.toDo__task:hover .toDo__task-del {
+    display: block;
+}
+
+.toDo__task-complete .toDo__task-text {
+    text-decoration: line-through;
+    color: var(--default);
+}
+
+.toDo__checkbox {
+    margin-right: 16px;
+}
+
+.toDo__checkbox input {
+    display: none;
+}
+
+.toDo__checkbox input:checked+div {
+    background-color: var(--accent);
+}
+
+.toDo__checkbox input:checked+div::after {
+    display: block;
+}
+
+.toDo__checkbox div {
+    cursor: pointer;
+    --size: 28px;
+    height: var(--size);
+    width: var(--size);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    position: relative;
+    color: white;
+}
+
+.toDo__checkbox div::after {
+    content: "✔";
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.toDo__task-text {
+    font-size: 20px;
+}
+
+.toDo__task-del {
+    display: none;
+    margin-left: auto;
+    margin-right: 0;
+    line-height: calc(var(--size) * 0.88);
+    font-size: 44px;
+}
+
+.todo_tasks-count{
+    text-transform: capitalize;
+}
