@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 2px solid black;
+            background: green;
+        }
+
+        .block2 {
+            width: 100px;
+            height: 100px;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 2px solid black;
+            background: red;
+        }
+
+        .block3 {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 2px solid black;
+            margin: 2px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        //повторення
+
+        /* let num = parseFloat(prompt());
+
+        for (let i = 0; i < num; i++) {
+            if (i % 2 == 1) {
+                document.write("<div class='block2'></div>")
+            } else {
+                document.write("<div class='block'></div>")
+            }
+            if ((i+1) % 10 === 0 ) {
+                document.write("<br>")
+            }
+        } */
+
+        /*   for (let i = 0; i < 10; i++);{
+  
+              for (let j = 0; j < 10; j++) {
+                  document.write("<div class='block2'></div>")
+              }
+              document.write("<br>");
+          }
+   */
+
+
+        //TRIANGLE
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("<div class='block3'></div>");
+            }
+
+            document.write("<br/>");
+        }
+
+
+        /* for (let i = 10; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.write("<div class='block3'></div>");
+            }
+
+            document.write("<br/>");
+        } */
+
+
+
+      /*   for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= i; j++) {
+      document.write('*');
+
+    }
+    document.write('<br>');
+  }
+  for (let i = 10; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+      document.write('*');
+    }
+    document.write('<br>');
+  } */
+
+
+
+        /* for (let i = 0; i < 25; i++) {
+            for (let j = 0; j < 110; j++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        } */
+    </script>
+</body>
+
+</html>

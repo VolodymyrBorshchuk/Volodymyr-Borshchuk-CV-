@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework-buttons</title>
+    <style>
+        .btn-wrapper {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 20px;
+            min-width: 120px;
+            padding: 7px;
+            color: #fff;
+            font-size: 14px;
+            background-color: #33333a;
+            cursor: pointer;
+        }
+
+        .btn:active,
+        .btn:focus {
+            outline: none;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Кожна кнопка містить назву клавіші на клавіатурі після натискання вказаних клавіш  - та кнопка на якій написаан ця літера повинна фарбуватись у синій колір. При цьому якщо якась інша літера вже раніше була пофарбована в синій колір - вона стає чорною. Наприклад за натисканням ЕНТЕР перша кнопка забарвлюється в синій колір. Далі, користувач натискає S і ця кнопка забарвлюється в синій колір а кнопка ентер знову стає чорною-->
+
+    <div class="btn-wrapper">
+        <button class="btn ent">Enter</button>
+        <button class="btn butS">S</button>
+        <button class="btn butO">O</button>
+        <button class="btn butN">N</button>
+        <button class="btn butE">E</button>
+        <button class="btn butL">L</button>
+        <button class="btn butZ">Z</button>
+    </div>
+
+    <script>
+        let [...buttons] = document.querySelectorAll("button");
+
+        const remove = function() {
+            buttons.forEach((e) => {
+                e.classList.remove("blue")
+            })
+        };
+
+        let btnRez = buttons.map(function(element){
+            return element
+        }).filter((element) => {
+            return element.type = "button"
+        });
+
+        btnRez.forEach((e) => {
+
+            e.addEventListener('click', (e) =>{
+                console.log(e.target)
+                remove()
+                e.target.classList.add("blue")
+            });
+        });
+
+        //for the keyboard
+        document.addEventListener("keypress", (e) =>{
+                if (e.key === "Enter"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".ent").classList.add("blue")
+                } else if (e.key === "s"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".butS").classList.add("blue")
+                } else if (e.key === "o"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".butO").classList.add("blue")
+                } else if (e.key === "n"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".butN").classList.add("blue")
+                } else if (e.key === "l"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".butL").classList.add("blue")
+                } else if (e.key === "e"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".butE").classList.add("blue")
+                } else if (e.key === "z"){
+                    console.log(e)
+                    remove();
+                    document.querySelector(".butZ").classList.add("blue")
+                }
+            })
+    </script>
+</body>
+
+</html>

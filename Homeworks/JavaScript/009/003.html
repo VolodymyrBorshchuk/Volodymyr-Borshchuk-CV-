@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainDiv {
+            width: 500px;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <img src="https://thumbs.dreamstime.com/b/chica-con-bandera-de-ucrania-en-un-campo-entre-trigo-192600663.jpg"
+            alt="">
+        <img src="https://images.unian.net/photos/2014_05/thumb_files/1200_0_1400752071-9388.jpeg
+        " alt="">
+        <img src="https://kartinkin.net/uploads/posts/2022-03/thumbs/1647882787_38-kartinkin-net-p-kartinki-pro-ukrainu-45.jpg
+        " alt="">
+        <img src="https://kartinkin.net/uploads/posts/2022-03/thumbs/1647882870_61-kartinkin-net-p-kartinki-pro-ukrainu-73.jpg
+        " alt="">
+        <img src="https://kartinkin.net/uploads/posts/2022-03/thumbs/1647882732_28-kartinkin-net-p-kartinki-pro-ukrainu-33.jpg
+        " alt="">
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            let nextslide = 0;
+
+            const action = () => {
+                let slides = document.querySelectorAll('img');
+
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                };
+                nextslide++;
+
+                if (nextslide > slides.length) {
+                    nextslide = 1;
+                };
+
+                slides[nextslide - 1].style.display = 'block';
+
+                setTimeout(action, 2000);
+            }
+
+
+            action()
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

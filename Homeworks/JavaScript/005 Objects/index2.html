@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var doc = {
+            title: "", content: "", footer: "", date: "",
+            putData: function (data) {
+                var self = this;
+                Object.keys(data).forEach(function (item) {
+                    if (self.hasOwnPoperty(item)) {
+                        self[item] = data[item];
+                    }
+                });
+            },
+            showData: function () {
+                alert('title:' + this.title + "\r\ncontent: " + this.content + "\r\nfooter: " + this.footer + "\r\ndate: " + this.date);
+            }
+        }
+
+        doc.putData({
+            title: 'Заголовок',
+            content: 'Тело',
+            footer: 'Футер',
+            date: new Date()
+        })
+
+        doc.showData;
+    </script>
+</body>
+
+</html>

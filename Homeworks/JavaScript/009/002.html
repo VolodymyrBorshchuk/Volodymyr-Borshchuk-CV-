@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name {
+            width: 300px;
+            height: 100px;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let div = document.createElement("div");
+        div.className = "name";
+        div.style.textAlign = 'center';
+        document.body.append(div);
+
+        let perem = document.querySelector(".name")
+
+        let input = document.createElement('input');
+        input.placeholder = "000-000-00-00";
+        input.style.textAlign = 'center';
+
+        div.prepend(input);
+
+
+        //addNmbr.append(tel);
+        //addNmbr.append(sendBut)
+
+        let sendBut = document.createElement('button');
+        sendBut.innerText = 'Відправити';
+        div.append(sendBut);
+
+        const errorMessage = document.createElement("div");
+        errorMessage.innerText = "Try again!";
+
+        perem.prepend(input);
+        perem.append(sendBut);
+
+        sendBut.onclick = () => {
+            let pattern = /\d{3}-\d{3}-\d{2}-\d{2}/;
+
+            if (pattern.test(input.value)) {
+                document.location = "https://google.com";
+            } else {
+                perem.insertBefore(errorMessage, input);
+                
+                input.value = "";
+                input.placeholder = "...like this 000-000-00-00";
+                input.style.background = "rgba(255, 104, 44, 0.753)"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

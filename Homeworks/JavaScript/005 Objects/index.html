@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style media="screen">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-shadow: 1px 1px 2px black;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        section {
+            width: 100%;
+            min-height: 100px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: auto;
+            border: 1px solid black
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            width: 100%;
+            text-align: center;
+            min-height: 30px;
+        }
+
+        div {
+            text-align: right;
+            font-size: .8rem;
+            margin: 0 10px 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var a = prompt("Введи заголовок документа", 'f');
+        var b = prompt("Введи основную информацию документа",'f');
+        var c = prompt("Введи подвал(дополнительную информацию) документа",'s');
+        var d = prompt("Введи дату заполнения, дд.мм.гггг",'d');
+
+
+        var myDoc = {
+            header: "",
+            body: "",
+            footer: "",
+            date: "",
+            docApp: {
+                header: {},
+                body: {},
+                footer: {},
+                date: {},
+            },
+            docEnter: function (a, b, c, d) {
+                myDoc.header = a;
+                myDoc.body = b;
+                myDoc.footer = c;
+                myDoc.date = d;
+            },
+            docShow: function () {
+                document.write(`<h1> ${myDoc.header} </h1> <section> ${myDoc.body}</section> <footer> ${myDoc.footer}<div> ${myDoc.date}</div></footer>`)
+            }
+        };
+
+        myDoc.docEnter(a, b, c, d);
+        myDoc.docShow();
+    </script>
+</body>
+
+</html>

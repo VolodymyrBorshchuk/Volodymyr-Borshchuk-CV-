@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // variant 1 мое решение
+
+        var a = +prompt("Введите число a", '1');
+        var b = +prompt("Введите число b, больше или равное предыдущему", '10');
+
+        for (; a < b;) {
+            let res = (a + b) * (b - a + 1) / 2;
+            alert("Сумма чисел от a до b = " + res);
+            break;
+        }
+
+        if (a == b) { /* что бы можно было получить сумму двух равных чисел */
+            res = a + b;
+            alert("Сумма чисел от a до b = " + res);
+        }
+
+        document.write('А вот и список всех нечетных чисел в диапазоне от a до b ' + '<br>');
+        for (i = a; i < b; i++) {
+            if (i % 2 == 0) continue;
+            document.write(i + '<br>');
+        }
+        //Написал последний if поскольку последнее значение из диапазона чисел не отображалось (например: если от 1 до 9, то 9 не будет. 
+        //Если от 1 до 10, тогда 9 уже попадает в список. Действие ниже решило проблему - теперь отображены все числа с последним включительно)
+        if (i % 2 !== 0) {
+            document.write(b + '<br>');
+        }
+
+
+
+
+        // another student answers
+        //variant 2
+
+      /*   let a = +prompt('Enter first number');
+        let b = +prompt('Enter second number');
+
+        if (a < b) {
+            let i = a;
+            let sum = 0;
+            let list = '';
+            while (i < b) {
+                sum += i;
+                if (i % 2 !== 0) {
+                    list += ' ' + i;
+                }
+                i++;
+            }
+            document.write('The sum of the numbers from A to B is ' + sum);
+            if (list.length > 0) {
+                document.write('<p>' + 'Odd numbers werefound from A to B:' + list);
+            } else {
+                document.write('<p>' + 'No odd numbers were found in the number range from A to B!');
+            }
+        } else {
+            document.write('Condition A < B is not met!');
+        } */
+
+
+        //variant 3
+
+       /*  let A = parseInt(prompt("Enter A"));
+        let B = parseInt(prompt("Enter B"));
+
+        let factorial = 0 ;
+        let odd = [];
+
+        for(let i=A; i<=B; i++) {
+            factorial +=i;
+            if (i % 2 !== 0) {
+                odd.push(i);
+            }
+        }
+        document.write(factorial);
+        document.write("<br/>" + odd); */
+    </script>
+</body>
+
+</html>

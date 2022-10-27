@@ -1,0 +1,47 @@
+tr {
+    text-transform: capitalize;
+}
+
+table div {
+    border: 1px solid red
+}
+
+.divname {
+    background-color: rgb(67, 215, 245);
+}
+
+.divheight {
+    background-color: rgb(166, 199, 116);
+}
+
+.divgender {
+    background-color: peru;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* width: max-content; */
+    margin: 2em auto;
+    background-color:grey;
+    border: 4px solid chocolate;
+    border-radius: 50px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card > div {
+    width: 40em;
+    display: flex;
+    padding: 0.8em; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card>div>div {
+    padding-top: 20px;
+}

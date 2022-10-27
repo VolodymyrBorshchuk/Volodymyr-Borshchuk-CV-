@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //additional tasks
+
+        /* const a = ['a', 'b', 'c'];
+        const b = a.concat(1, 2, 3);
+        document.write('<p>' + b + '<br>');
+        a.push('1', '2', '3');
+        document.write(a + '<br>'); */
+
+
+
+        /* let arr = ['1', '2', '3'];
+        arr.splice(0, 3, 3, 2, 1);
+        arr.push(4, 5, 6);
+        arr.unshift(4, 5, 6);
+        document.write(arr.join(', *') + '<br>');
+        let arr2 = ['js', 'css', 'jq'];
+        document.write(arr2[0]); */
+
+
+
+        /* let arr = [1, 2, 3, 4, 5];
+        document.write(arr + '<p>')
+        document.write(arr.slice(0, 3)) */
+
+
+
+        /* let arr = [1, 2, 3, 4, 5];
+        const a = arr.splice(1, 2);
+        document.write(arr); */
+
+
+
+        /* let arr = [1, 2, 3, 4, 5];
+        const a = arr.splice(2, 0, 10);
+        document.write(arr + '<p>');
+        const arr2 = [3, 4, 1, 2, 7];
+            document.write(arr2 + '<p>');
+        arr2.sort();
+        document.write(arr2); */
+
+
+
+        /* let arr = ['Привет, ', 'мир', '!'];
+        document.write(arr[0] + arr[1] + arr[2] + '<p>');
+        const a = arr.splice(0, 1, "Goodbye, ");
+        document.write(arr[0] + arr[1] + arr[2] + '<p>'); */
+
+
+
+        /* var arr = {
+            'ru': ['голубой', 'красный', 'зеленый'],
+            'en': ['blue', 'red', 'green'],
+        };
+        document.write(arr['ru'] [0] + '<p>' + arr['en'] [0]); */
+
+
+
+        /* let arr = ['a', 'b', 'c', 'd'];
+        document.write(arr[0] + '+' + arr[1] + ', ' + arr[2] + '+' + arr[3]) */
+
+
+
+        let arrLength = prompt('Величина масиву ?')
+        const res = [];
+        for (let i = 0; i < arrLength; i++) {
+            res[i] = i;
+        }
+        document.write(res.join(' ') + '<p >');
+
+        let paired = []; unpaired = [];
+        for (let i = 0; i < res.length; i++) {
+            if (res[i] % 2 == 0) {
+                paired.push(res[i]);
+            } else {
+                unpaired.push(res[i]);
+            }
+        }
+        document.write(paired.join(', ') + '<br>');
+        document.write('<span style = "background-color: red">' + unpaired.join(', ') + '<p>');
+
+
+
+        let vegetables = ['Капуста', 'Репа', 'Редиска', 'Морковка'];
+        let str1 = vegetables.join(', ');
+        document.write('Результат : ' + str1);
+
+
+    </script>
+</body>
+
+</html>

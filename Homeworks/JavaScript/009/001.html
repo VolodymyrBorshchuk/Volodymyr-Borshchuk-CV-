@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .default {
+            background: rgba(22, 97, 12, 0.5);
+        }
+
+        .black {
+            background: black;
+            padding: 1.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .silver {
+            background: rgba(88, 88, 88, .5);
+            padding: 1.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .red {
+            background: rgba(231, 40, 40, 0.5);
+            padding: 1.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .green {
+            background: rgba(39, 211, 76, 0.5);
+            padding: 1.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .container-stopwatch {
+
+            width: fit-content;
+            padding: 1rem;
+            text-align: center;
+            border-radius: .5rem;
+            box-shadow: 0 0 10px black;
+        }
+
+        .stopwatch-display {
+            padding: 1.5rem;
+            font-weight: bold;
+            box-sizing: border-box;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stopwatch-display span {
+            font-size: 2rem;
+        }
+
+        .stopwatch-control button {
+            text-transform: uppercase;
+            color: white;
+            background: rgba(0, 0, 0, 0.829);
+            border: none;
+            cursor: grab;
+        }
+
+        .stopwatch-control button:nth-child(2) {
+            margin: 0 .5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-stopwatch black">
+        <div class="stopwatch-display default"><span id="min">00</span>:<span id="sec">00</span>:<span id="ms">00</span></div>
+        <div class="stopwatch-control"><button id="start">Start</button><button id="stop">Stop</button><button
+                id="reset">Reset</button></div>
+    </div>
+
+    <script>
+        let timer = 0;
+        let timerInterval;
+        
+        let min = document.querySelector('#min');
+        let sec = document.querySelector('#sec');
+        let ms = document.querySelector('#ms');
+
+        let display = document.querySelector('.stopwatch-display');
+
+        let startButton = document.querySelector('#start');
+        startButton.onclick = function () {
+            display.classList.remove("default");
+            display.classList.remove("red");
+            display.classList.remove("silver");
+            display.classList.add("green");
+
+            stop();
+            timerInterval = setInterval(start, 1000 / 60);
+        }
+
+        let stopButton = document.querySelector("#stop");
+        stopButton.onclick = function () {
+            display.classList.remove("default");
+            display.classList.remove("green");
+            display.classList.remove("silver");
+            display.classList.add("red");
+
+            stop();
+        }
+
+        let resetButton = document.querySelector("#reset");
+        resetButton.onclick = function () {
+            display.classList.remove("default");
+            display.classList.remove("green");
+            display.classList.remove("red");
+            display.classList.add("silver");
+
+            reset();
+        }
+
+        let start = () => {
+            timer += 1 / 60;
+
+            let ms_ = Math.floor((timer - Math.floor(timer)) * 100);
+            let sec_ = Math.floor(timer) - Math.floor(timer / 60) * 60;
+            let min_ = Math.floor(timer / 60);
+
+            ms.textContent = ms_ < 10 ? "0" + ms_.toString() : ms_;
+            sec.textContent = sec_ < 10 ? "0" + sec_.toString() : sec_;
+            min.textContent = min_ < 10 ? "0" + min_.toString() : sec_;
+        }
+
+        let stop = () => {
+            clearInterval(timerInterval)
+        }
+
+        let reset = () => {
+            stop();
+            timer = 0;
+            ms.textContent = "00";
+            sec.textContent = "00";
+            min.textContent = "00";
+
+        }
+    </script>
+</body>
+
+</html>

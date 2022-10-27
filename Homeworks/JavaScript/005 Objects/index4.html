@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const document1 = {
+            header: '',
+            container: '',
+            footer: '',
+            data: '',
+            application: {
+                header: {
+
+                },
+                container: {
+
+                },
+                footer: {
+
+                },
+                data: {
+
+                }
+
+            },
+            show: () => {
+                document.write(`<p>Header:  ${document1.header}`);
+                document.write(`<p>Container:  ${document1.container}`);
+                document.write(`<p>Footer:  ${document1.footer}`);
+                document.write(`<p>Data:  ${document1.data}`);
+                document.write('<br><hr>');
+
+            },
+            show1: () => {
+                for (let element in document1.application.header) {
+                    document.write(`<p>Application Header:  ${document1.application.header[element]}`);
+                };
+                document.write('<br><hr>');
+                for (let element in document1.application.container) {
+                    document.write(`<p>Application Container:  ${document1.application.container[element]}`);
+                };
+                document.write('<br><hr>');
+                for (let element in document1.application.footer) {
+                    document.write(`<p>Application Footer:  ${document1.application.footer[element]}`);
+                };
+                document.write('<br><hr>');
+                for (let element in document1.application.data) {
+                    document.write(`<p>Application Data:  ${document1.application.data[element]}`);
+                };
+                document.write('<br><hr>');
+            }
+        };
+
+
+        document1['header'] = 'Header';
+        document1['container'] = 'Container';
+        document1['footer'] = 'Footer';
+        document1['data'] = 'Data';
+
+        document1.application.header.contest1 = '1_Header';
+        document1.application.header.contest2 = '2_Header';
+
+        document1.application.container.contest1 = '1_Container';
+        document1.application.container.contest2 = '2_Container';
+
+        document1.application.footer.contest1 = '1_Footer';
+        document1.application.footer.contest2 = '2_Footer';
+
+        document1.application.data.contest1 = '1_Data';
+        document1.application.data.contest2 = '2_Data';
+
+
+        console.log(document1);
+        document1.show();
+        document1.show1()
+
+    </script>
+
+</body>
+
+</html>

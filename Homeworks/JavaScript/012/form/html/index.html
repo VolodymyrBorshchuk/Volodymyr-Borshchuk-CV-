@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- створити форму для реєстрації покупця
+    імя прізвище мін 2 літери
+    кириля , вік, число , телефон +38, індекс число, та статус за замовчуванням активний клієнт
+    данні які ввів клієн зберігаємо в браузері , та після збередення показуємо данні у вигляді таблиці на сторінці, де мають бути показані 
+    тільки діючі клієнти -->
+    <form>
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="sername" placeholder="lastname">
+        <input type="number" id="age" placeholder="age">
+        <input type="tel" id="phonenumber" placeholder="phonenumber">
+        <input type="number" id="index" placeholder="index">
+        <input type="button" value="save">
+    </form>
+    <table>
+        <thead>
+        <tbody>
+            <tr>
+                <td>Client name</td>
+                <td>Client Sername</td>
+                <td>Client age</td>
+                <td>Phone Number</td>
+                <td>Index</td>
+                <td>Status</td>
+            </tr>
+        </tbody>
+        </thead>
+    </table>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

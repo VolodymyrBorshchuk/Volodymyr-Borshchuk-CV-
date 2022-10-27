@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        var hum1 = new Human("Johny", 29);
+        var hum2 = new Human("Tyler", 14);
+        var hum3 = new Human("Endy", 85);
+        var hum4 = new Human("Hloey", 66);
+        var hum5 = new Human("Ann", 6);
+        var hum6 = new Human("Kristofer", 18);
+
+        var users = [hum1, hum2, hum3, hum4, hum5, hum6];
+
+        //myArray.sort((a, b) => a - b);
+
+        // users.sort((a,b) => a.age - b.age);
+
+        
+        users.sort((a, b) => a.age - b.age);
+
+        document.write("По возрастанию:" + "<hr>")
+
+        for (let item of users) { document.write(`Меня зовут ${item.name}, мне ${item.age} лет` + "<br>") };
+
+        users.sort((a, b) => b.age - a.age);
+
+        document.write("<hr>" + "По убыванию:" + "<hr>")
+
+        for (let item of users) { document.write(`Меня зовут ${item.name}, мне ${item.age} лет` + "<br>") };
+
+    </script>
+</body>
+
+</html>

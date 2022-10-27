@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [], index = prompt("entry index");
+
+        for (let i = 0; i < 15; ++i){
+            arr [i] = (Math.floor(Math.random() * 100));
+           
+        }
+
+        document.write(arr.join('&#9728;') + '<br>')
+
+        arr.splice(0, index, 999, 888);
+
+        arr.reverse();
+
+        document.write(arr.join('&#9729;'));
+
+    </script>
+</body>
+</html>

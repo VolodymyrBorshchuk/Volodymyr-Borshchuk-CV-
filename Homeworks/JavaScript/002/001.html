@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEWORK</title>
+</head>
+
+<body>
+    <script>
+        
+        //прямоугольник
+
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 40; j++) {
+                document.write("*")
+            } document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+        //прямоугольный треугольник
+
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('*')
+            }
+            document.write('<br>')
+        }
+
+        document.write("<hr>")
+
+        //Равносторонний треугольник - списал :)
+        var line = 10;
+        var space = 9;
+        var star = 1;
+        for (var k = 0; k < line; k++) {
+            for (var j = 0; j < space; j++) {
+                document.write('&nbsp\n');
+            }
+            for (var n = 0; n < star; n++) {
+                document.write("*");
+            }
+            space -= 1;
+            star += 2;
+            document.write("<br>");
+        }
+        document.write("<br>");
+
+
+        document.write("<hr>")
+
+        //ромб - списал :)
+        var line = 14;
+        var space = 12;
+        var star = 1;
+        for (var k = 0; k <= line; k++) {
+            for (var j = 0; j <= space; j++) {
+                document.write("&nbsp")
+            };
+            for (var i = 0; i < star; i++) {
+                document.write("*");
+            }
+            space--;
+            star++;
+            if (k >= line / 2 && k <= line) {
+                star = star - 2;
+                space = space + 2;
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+    </script>
+</body>
+
+</html>

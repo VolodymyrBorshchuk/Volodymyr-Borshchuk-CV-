@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let log = prompt("Your login");
+
+        if (log == 'admin') {
+            let pas = prompt('Your password');
+            if (pas == 'lord') {
+                alert('wellcome');
+            } else if (pas == '') {
+                alert('Enter the password');
+            } else if (pas != 'lord') {
+                alert('uncorrect password, try again');
+            } else {
+                alert('entry canceled');
+            }
+        } else if (log == '') {
+            alert('Enter the login');
+        } else if (log != 'admin') {
+            alert('uncorrect login, try again');
+        } else {
+            alert('entry canceled');
+        }
+
+
+        // цікавий варіант зі спробами від @Edward
+
+        /* let login, pin, Yes, True = 1;
+
+while (True) {
+    Yes = 5;
+    login = prompt('Логін:', 'Адмін');
+    if (login === 'Адмін') {
+        while (Yes) {
+            pin = prompt('Пароль', 'Володар');
+            if (pin === 'Володар') {
+                alert('Ласкаво просимо');
+                Yes = 0;
+                True = 0;
+
+            } else if (pin === null) {
+                True = 0;
+                Yes = 0;
+                alert('Вхід відмінено');
+
+            } else {
+                Yes--;
+                alert(`Пароль невірний! Лишилось спроб: ${Yes}`);
+
+            }
+        }
+    } else if (login === null) {
+        True = 0;
+        alert('Вхід відмінено');
+
+    } else {
+        alert('Такого логіна не існує!');
+
+    }
+} */
+    </script>
+</body>
+
+</html>
