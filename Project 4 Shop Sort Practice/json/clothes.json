@@ -1,0 +1,227 @@
+[
+    {
+      "id":1,
+      "title":"Boots 1",
+      "type":"boots",
+      "color":"grey",
+      "desc":"snowpark boots",
+      "price":"110",
+      "img":"../img/boots/1.png"
+    },
+    {
+      "id":2,
+      "title":"Boots 2",
+      "type":"boots",
+      "color":"black",
+      "desc":"snowpark boots",
+      "price":"150",
+      "img":"../img/boots/2.jpg"
+    },
+    {
+      "id":3,
+      "title":"Boots 3",
+      "type":"boots",
+      "color":"pink",
+      "desc":"snowpark boots",
+      "price":"140",
+      "img":"../img/boots/3.jpg"
+    },
+    {
+      "id":4,
+      "title":"Boots 4",
+      "type":"boots",
+      "color":"green",
+      "desc":"hard boots",
+      "price":"150",
+      "img":"../img/boots/4.jpg"
+    },
+    {
+      "id":5,
+      "title":"Boots 5",
+      "type":"boots",
+      "color":"red",
+      "desc":"hard boots",
+      "price":"160",
+      "img":"../img/boots/5.jpg"
+    },
+    {
+      "id":6,
+      "title":"goggle 1",
+      "type":"goggle",
+      "color":"black",
+      "desc":"for good weather",
+      "price":"150",
+      "img":"../img/goggles/1.jpg"
+    },
+    {
+      "id":7,
+      "title":"goggle 2",
+      "type":"goggle",
+      "color":"black",
+      "desc":"for good weather",
+      "price":"170",
+      "img":"../img/goggles/2.png"
+    },
+    {
+      "id":8,
+      "title":"goggle 3",
+      "type":"goggle",
+      "color":"red",
+      "desc":"for bad weather",
+      "price":"120",
+      "img":"../img/goggles/3.jpg"
+    },
+    {
+      "id":9,
+      "title":"goggle 4",
+      "type":"goggle",
+      "color":"red",
+      "desc":"for bad weather",
+      "price":"130",
+      "img":"../img/goggles/4.png"
+    },
+    {
+      "id":10,
+      "title":"goggle 5",
+      "type":"goggle",
+      "color":"red",
+      "desc":"for bad weather",
+      "price":"140",
+      "img":"../img/goggles/5.png"
+    },
+    {
+      "id":11,
+      "title":"head 1",
+      "type":"head",
+      "color":"red",
+      "desc":"for good weather",
+      "price":"140",
+      "img":"../img/head/1.jpg"
+    },
+    {
+      "id":12,
+      "title":"head 2",
+      "type":"head",
+      "color":"red",
+      "desc":"for good weather",
+      "price":"140",
+      "img":"../img/head/2.jpg"
+    },
+    {
+      "id":13,
+      "title":"head 3",
+      "type":"head",
+      "color":"red",
+      "desc":"for bad weather",
+      "price":"140",
+      "img":"../img/head/3.jpg"
+    },
+    {
+      "id":14,
+      "title":"head 4",
+      "type":"head",
+      "color":"red",
+      "desc":"for bad weather",
+      "price":"140",
+      "img":"../img/head/4.jpg"
+    },
+    {
+      "id":15,
+      "title":"head 5",
+      "type":"head",
+      "color":"red",
+      "desc":"for bad weather",
+      "price":"140",
+      "img":"../img/head/5.png"
+    },
+    {
+      "id":16,
+      "title":"jacket 1",
+      "type":"jacket",
+      "color":"red",
+      "desc":"man's jackets",
+      "price":"140",
+      "img":"../img/jackets/1.jpg"
+    },
+    {
+      "id":17,
+      "title":"jacket 2",
+      "type":"jacket",
+      "color":"red",
+      "desc":"man's jackets",
+      "price":"140",
+      "img":"../img/jackets/2.png"
+    },
+    {
+      "id":18,
+      "title":"jacket 3",
+      "type":"jacket",
+      "color":"red",
+      "desc":"man's jackets",
+      "price":"140$",
+      "img":"../img/jackets/3.png"
+    },
+    {
+      "id":19,
+      "title":"jacket 4",
+      "type":"jacket",
+      "color":"red",
+      "desc":"female jackets",
+      "price":"140",
+      "img":"../img/jackets/4.png"
+    },
+    {
+      "id":20,
+      "title":"jacket 5",
+      "type":"jacket",
+      "color":"red",
+      "desc":"female jackets",
+      "price":"140",
+      "img":"../img/jackets/5.png"
+    },
+    {
+      "id":21,
+      "title":"tshort 1",
+      "type":"tshort",
+      "color":"red",
+      "desc":"burton",
+      "price":"140",
+      "img":"../img/tshorts/1.jpg"
+    },
+    {
+      "id":22,
+      "title":"tshort 2",
+      "type":"tshort",
+      "color":"red",
+      "desc":"burton",
+      "price":"140",
+      "img":"../img/tshorts/2.jpg"
+    },
+    {
+      "id":23,
+      "title":"tshort 3",
+      "type":"tshort",
+      "color":"red",
+      "desc":"burton",
+      "price":"140",
+      "img":"../img/tshorts/3.png"
+    },
+    {
+      "id":24,
+      "title":"tshort 4",
+      "type":"tshort",
+      "color":"red",
+      "desc":"quikSilver",
+      "price":"140",
+      "img":"../img/tshorts/4.jpg"
+    },
+    {
+      "id":25,
+      "title":"tshort 5",
+      "type":"tshort",
+      "color":"red",
+      "desc":"quikSilver",
+      "price":"140",
+      "img":"../img/tshorts/5.jpg"
+    }
+  ]
